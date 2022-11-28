@@ -1,0 +1,39 @@
+<!--새로운 게시글 작성-->
+{{>layouts/header}}
+
+<h2 id="new">글 수정</h2>
+<hr>
+<br><br><br>
+
+{{#article}}
+<form class="container" action="/articles/update" method="post">
+    <input name="id" type="hidden" value="{{id}}" />
+    <div class="mb-3">
+        <label>게시글 구분</label>
+        <select name="division" class="form-select form-select-sm align-center"
+                aria-label=".form-select-sm example text-center">
+            <option selected>{{division}}</option>
+            <option value="자유글">자유글</option>
+            <option value="레시피 공유">레시피 공유</option>
+            <option value="정보 공유">정보 공유</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">제목</label>
+        <input type="text" class="form-control" name="title" value="{{title}}">
+    </div>
+    <div class="mv-3">
+        <label class="form-label">내용</label>
+        <textarea class="form-control" rows="8" name="content">{{content}}</textarea>
+    </div>
+    <br>
+
+    <div align="right">
+        <button type="submit" class="btn btn-outline-success">수정</button>
+        <a href="/articles/{{id}}" class="btn btn-outline-success">이전</a>
+        <a href="/articles" class="btn btn-outline-success" align="right">목록</a>
+    </div>
+</form>
+{{/article}}
+
+{{>layouts/footer}}

@@ -1,0 +1,35 @@
+{{>layouts/header}}
+
+{{#dataid}}
+<div class="listshow">
+    <div class="text-center">
+        <img src="/images/{{image}}" class="rounded"  id="imgshow">
+    </div>
+    <div class="container text-center padding-50" id="listshow">
+        <h1>{{name}}</h1>
+    </div>
+    <div class="container text-center" id="listshow">
+        <h2>{{kind}}</h2>
+    </div>
+    <div class="container text-center" id="listshow">
+        <h2> 시작 날짜 {{start}}</h2>
+    </div>
+    <div class="container text-center" id="listshow">
+        <h2>종료 날짜 {{enddate}}</h2>
+    </div>
+    <div>
+        <h2 class="containr text-center" id="listshow">종료까지 {{othermonth}}개월 {{otherdate}}일 남았습니다!</h2>
+    </div>
+    <div>
+        <h3 class="text-center" id="listshow">식자재에 대한 설명</h3>
+    </div>
+    <div class="container text-center" id="listshow">
+        <h3>{{nameinfo}}</h3>
+    </div>
+    <a href="/view/refrigerator">
+        <button class="btn btn-primary" id="backbutton">냉장고 페이지로 가기</button>
+    </a>
+</div>
+{{/dataid}}
+
+{{>layouts/footer}}

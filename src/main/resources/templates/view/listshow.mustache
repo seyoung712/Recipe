@@ -1,0 +1,88 @@
+{{>layouts/header}}
+
+{{#dataid}}
+
+<h2 id="new">식자재 상세 정보</h2>
+<hr>
+    <div class="listshowtable container text-center">
+
+<table class="detail-tbl-1">
+    <tr>
+        <td style="padding:15px;"> <h3>{{name}}</h3> </td>
+    </tr>
+    <tr>
+        <td> <img src="/images/{{image}}" style="width:300px; height:300px;"> </td>
+    </tr>
+</table>
+
+<br>
+
+<table class="detail-tbl-2 detail-border">
+    <tr class="detail-border">
+        <td bgcolor="#eaeaea" width="300px">구분</td>
+        <td>{{kind}}</td>
+    </tr>
+    <tr>
+        <td bgcolor="#eaeaea" width="300px">제조일</td>
+        <td>{{start}}</td>
+    </tr>
+    <tr>
+        <td bgcolor="#eaeaea" width="300px">폐기일</td>
+        <td>{{enddate}}</td>
+    </tr>
+    <tr>
+        <td bgcolor="#eaeaea" width="300px">유통기한</td>
+        <td>{{othermonth}}개월 {{otherdate}}일</td>
+    </tr>
+    <tr>
+        <td  class="listinfo" bgcolor="#eaeaea" width="300px">수량 및 설명</td>
+        <td>{{nameinfo}}</td>
+    </tr>
+</table>
+
+<table class="detail-tbl-1">
+    <tr>
+        <td>
+            <a href="/view/refrigerator">
+            <button class="btn btn-outline-primary btn-lg"  style="width:230px; height:35px; font-size:15px; margin:15px;">
+                냉장고 페이지로 바로가기
+            </button>
+            </a>
+        </td>
+    </tr>
+</table>
+    </div>
+<!--
+<div class="listshow">
+    <div class="container text-center padding-50" id="listshow">
+        <h3>{{name}}</h3>
+    </div>
+    <div class="text-center">
+        <img src="/images/{{image}}" style="width:300px; height:300px;" class="rounded" id="imgshow">
+    </div>
+    <div class="container text-center" id="listshow">
+        <h2>{{kind}}</h2>
+    </div>
+    <div class="container text-center" id="listshow">
+        <h2> 시작 날짜 {{start}}</h2>
+    </div>
+    <div class="container text-center" id="listshow">
+        <h2>종료 날짜 {{enddate}}</h2>
+    </div>
+    <div>
+        <h2 class="containr text-center" id="listshow">종료까지 {{othermonth}}개월 {{otherdate}}일 남았습니다!</h2>
+    </div>
+    <div>
+        <h3 class="text-center" id="listshow">식자재에 대한 설명</h3>
+    </div>
+    <div class="container text-center" id="listshow">
+        <h3>{{nameinfo}}</h3>
+    </div>
+    <a href="/view/refrigerator">
+        <button class="btn btn-primary" id="backbutton">냉장고 페이지로 가기</button>
+    </a>
+</div>
+-->
+{{/dataid}}
+
+{{>layouts/footer}}

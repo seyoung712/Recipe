@@ -1,0 +1,3 @@
+insert into data (id,name,start,enddate,kind,otherdate,nameinfo,image,othermonth,plusdate) values (1,'사과','2022-07-10','2022-10-10','과일','0','사과는 빨간색이다.','css.png','3','2022-10-10');
+insert into data (id,name,start,enddate,kind,otherdate,nameinfo,image,othermonth,plusdate) values (2,'딸기','2022-07-10','2022-10-10','과일','0','딸기는 빨간색이다.','flower.png','3','2022-10-10');
+insert into data (id,name,start,enddate,kind,otherdate,nameinfo,image,othermonth,plusdate) values (3,'배','2022-07-10','2022-10-10','과일','0','배는 노란색이다.','html-5.png','3','2022-10-10');

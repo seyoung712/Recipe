@@ -1,0 +1,144 @@
+{{>layouts/header}}
+<!--<div>-->
+<!--    <script>-->
+<!--date = new Date().toLocaleDateString();-->
+<!--document.write(date);-->
+<!---->
+<!--</script>-->
+<!--</div>-->
+<!-- 구성 -->
+<!-- 유통기한 확인 -->
+<!--과일 이름 클릭시 update와 delete기능을 추가해야한다.-->
+<!--<div class="text-center"id="new1">-->
+
+<!--<h2 id="new">식자재 등록 정보</h2>-->
+<!--<hr>-->
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">새로운 식자재 등록하기</h1>
+            <br>
+            <br>
+            <br>
+            <p class="lead text-muted">이전에 구매한 식자재나 오늘 구매한 식자재를 등록하세요!</p>
+            <!-- <p>
+              <a href="#" class="btn btn-primary my-2">Main call to action</a>
+              <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+            </p> -->
+        </div>
+    </div>
+</section>
+
+<table align="right">
+    <td>
+        <form action="/textset" method="get">
+            <button class="w-btn-outline w-btn-blue-outline btn" type="submit" onclick="alert('부류별로 정렬하였습니다.')">부류별 정렬</button>
+        </form>
+    </td>
+    <td>
+        <form action="/nameset" method="get">
+            <button class="w-btn-outline w-btn-blue-outline btn" type="submit" onclick="alert('식자재 이름순으로 정렬하였습니다.')">식자재 이름순으로 정렬</button>
+        </form>
+    </td>
+    <td>
+        <form action="/view/refrigerator" method="get">
+            <button class="w-btn-outline w-btn-blue-outline btn" type="submit" onclick="alert('남은 기한순으로 정렬하였습니다.')">남은 기한순 정렬</button>
+        </form>
+    </td>
+</table>
+
+<br>
+<br>
+<br><br>
+
+<!--등록된 식자재-->
+<form action="/Recipe" method="get">
+    <div class="container text-center">
+        <div class="row center-table">
+
+            {{#datalist}}
+<!--                모델로 지정한 datalist를 불러온다.-->
+
+                <div class="card" style="width: 15rem;">
+                    <img src="/images/{{image}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">{{name}}</h5>
+                        <p class="menuinfo">{{nameinfo}}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">부류 : {{kind}}</li>
+                        <li class="list-group-item">구매일자 {{start}}</li>
+                        <li class="list-group-item">종료날짜 {{enddate}}</li>
+                        <li class="list-group-item" style="color:blue;">{{diffdays}}</li>
+
+
+                    </ul>
+<!--                    이미지 클릭시 식자재 상세보기로 이동한다.-->
+                    <div class="card-body">
+                        <a href="/imageshow/{{id}}" class="card-link" style="text-decoration:none; color: inherit;"><b>식자재 상세보기</b></a>
+                    </div>
+<!--                    삭제 버튼-->
+                    <div class="card-body">
+                        <a href="/listDelete/{{id}}"><li class="btn btn-outline-danger">삭제</li></a>
+                    </div>
+                </div>
+
+            {{/datalist}}
+
+
+
+        </div>
+    </div>
+</form>
+
+</div>
+
+<br><br><br><br>
+
+<!--식자재 신규 등록-->
+<div class="container back">
+<!--    form 태그를 사용해서 데이터를 전송한다-->
+<form action="/view/create" method="post">
+    <table align="center" border=1px bordercolor="gray" class="table">
+        <tr align="center" bgcolor="#EAEAEA">
+            <th width="350">재료명</th>
+            <th width="350">유통기한 시작일</th>
+            <th width="350">구분</th>
+        </tr>
+        <tr>
+<!--            dto,entity에서 지정한 변수명을 사용해야한다!!-->
+            <td width="350"><input type="text" class="form-control" name="name"></td>
+            <td width="350"><input type="date" class="form-control" name="start"></td>
+            <td width="350">
+<!--                select를 사용해서 선택할수있는 선택창을 만든다.-->
+                <select name="kind" class="form-select form-select-sm align-center"
+                        aria-label=".form-select-sm example text-center">
+                    <option selected>종류를 선택하세요</option>
+                    <option value="야채">야채</option>
+                    <option value="과일">과일</option>
+                    <option value="해당없음">해당없음</option>
+                </select>
+            </td>
+        </tr>
+        <tr align="center" bgcolor="#EAEAEA">
+            <th width="350">폐기일</th>
+            <th width="350">수량 및 설명</th>
+            <th width="350">이미지 삽입</th>
+        </tr>
+        <tr>
+<!--            dto,entity에서 지정한 변수명을 사용해야한다.-->
+            <td width="350"><input type="date" class="form-control" name="enddate"></td>
+            <td width="350"><textarea rows="2" class="textarea" style="width:100%; resize: none" name="nameinfo"></textarea></td>
+            <td width="350"><input type="file" class="form-control" name="image"></td>
+        </tr>
+    </table>
+
+    <div class="btt">
+<!--        form태그 안에있는 버튼을 사용해서 데이터를 전송한다. 어디로? action="/view/create" <- 여기로 전송하게 만든다-->
+<!--        전송하려면 버튼의 type은 submit이어야 한다.-->
+        <button type="submit" class="btn btn-outline-primary btn-lg" onclick="alert('새로운 식자재를 등록하였습니다!')">등록</button>
+    </div>
+</form>
+
+
+{{>layouts/footer}}

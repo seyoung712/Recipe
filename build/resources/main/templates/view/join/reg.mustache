@@ -1,0 +1,223 @@
+{{>layouts/header}}
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">회원가입</h1>
+        </div>
+    </div>
+</section>
+
+<form name="joinForm" id="joinForm" onsubmit="return false;">
+    <main class="form-signin w-1000 m-auto">
+        <table  align="center" style="width:100%">
+            <tr>
+                <td>
+                    <b>아이디</b>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="form-floating" style="color:gray;">
+                        <input type="text" class="form-control  " name="userId" id="userId" style="height:50px;"
+                               placeholder="name@example.com">
+                        <label for="floatingInput" class="text-center">ID</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="btn btn-outline-success" for="btn-check-outlined" onclick="dupCheck();"
+                            style="width:100%;">중복확인
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>이름</b>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="form-floating"  style="color:gray;">
+                        <input type="text" class="form-control  " name="userNm" id="userNm"  style="height:50px;"
+                               placeholder="name@example.com">
+                        <label for="floatingInput" class="text-center">Name</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>비밀번호</b>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="form-floating"  style="color:gray;">
+                        <input type="text" class="form-control  " name="userPw" id="userPw"  style="height:50px;"
+                               placeholder="name@example.com">
+                        <label for="floatingInput" class="text-center">Password</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>연락처</b>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="form-floating" style="color:gray;">
+                        <input type="number" class="form-control  " name="phone" id="phone"  style="height:50px;"
+                               placeholder="name@example.com">
+                        <label for="floatingInput" class="text-center">Phone</label>
+                        <button class="btn btn-outline-success" for="btn-check-outlined" onclick="authSend();"
+                                style="width:100%;">인증번호전송
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>인증번호</b>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="form-floating" style="color:gray;">
+                        <input type="number" class="form-control" name="certifi" id="certifi" style="height:50px;"
+                               placeholder="name@example.com">
+                        <label for="floatingInput" class="text-center">인증번호</label>
+                        <button class="btn btn-outline-success container" for="btn-check-outlined"
+                                onclick="authCheck();" style="width:100%;">확인
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>이메일</b>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="form-floating" style="color:gray;">
+                        <input type="text" class="form-control  " name="email" id="email" style="height:50px;"
+                               placeholder="name@example.com"
+                               size="20">
+                        <label for="floatingInput" class="text-center">E-Mail</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding:20px 0px 0px 0px;">
+                    <button type="button" class="w-100 btn btn-lg btn btn-success" style="width:100%; margin:auto;" onclick="regOk();">
+                        가입하기
+                    </button>
+                </td>
+            </tr>
+        </table>
+<!--
+        <table align="center" style="width:400;">
+            <tr>
+                <th class="text-center">User</th>
+                <td>
+                    <div class="form-floating" style="color:gray;">
+                        <input type="text" class="form-control  " name="userId" id="userId" style="height:50px;"
+                               placeholder="name@example.com">
+                        <label for="floatingInput" class="text-center">ID</label>
+                        &lt;!&ndash;                        <label class="btn btn-outline-primary" for="btn-check-outlined">중복확인</label>&ndash;&gt;
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="float:center; width:400;">
+                    <button class="btn btn-outline-success" for="btn-check-outlined" onclick="dupCheck();"
+                            style="width: 15rem;">중복확인
+                    </button>
+                </td>
+
+            </tr>
+
+
+
+            <tr>
+                <th class="text-center">Name</th>
+                <td>
+                    <div class="form-floating"  style="color:gray;">
+                        <input type="text" class="form-control  " name="userNm" id="userNm"  style="height:50px;"
+                               placeholder="name@example.com">
+                        <label for="floatingInput" class="text-center">Name</label>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <th class="text-center">PassWord</th>
+                <td>
+                    <div class="form-floating"  style="color:gray;">
+                        <input type="text" class="form-control  " name="userPw" id="userPw"  style="height:50px;"
+                               placeholder="name@example.com">
+                        <label for="floatingInput" class="text-center">PW</label>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <th class="text-center">Phone Number</th>
+                <td>
+                    <div class="form-floating" style="color:gray;">
+                        <input type="number" class="form-control  " name="phone" id="phone"  style="height:50px;"
+                               placeholder="name@example.com">
+                        <label for="floatingInput" class="text-center">Phone</label>
+                        <button class="btn btn-outline-success" for="btn-check-outlined" onclick="authSend();"
+                                style="width: 15rem;">인증번호전송
+                        </button>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+
+                <th class="text-center">인증번호</th>
+                <td>
+                    <div class="form-floating" style="color:gray;">
+                        <input type="number" class="form-control" name="certifi" id="certifi" style="height:50px;"
+                               placeholder="name@example.com">
+                        <label for="floatingInput" class="text-center">인증번호</label>
+                        <button class="btn btn-outline-success container" for="btn-check-outlined"
+                                onclick="authCheck();" style="width: 15rem;">확인
+                        </button>
+                    </div>
+                </td>
+
+            </tr>
+
+            <tr>
+                <th class="text-center">E-Mail</th>
+                <td>
+                    <div class="form-floating" style="color:gray;">
+                        <input type="text" class="form-control  " name="email" id="email" style="height:50px;"
+                               placeholder="name@example.com"
+                               size="20">
+                        <label for="floatingInput" class="text-center">E-Mail</label>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                </td>
+            </tr>
+        </table>
+
+        <div class="form-floating">
+            <br>
+
+            <button type="button" class="btn btn-primary" style="width:320px; margin:auto;" onclick="regOk();">가입하기
+            </button>
+
+        </div>
+-->
+        <br><br><br><br>
+
+{{>layouts/footer}}

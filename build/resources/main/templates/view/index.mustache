@@ -1,0 +1,38 @@
+<!--게시글 리스트를 전부 보여줌-->
+{{>layouts/header}}
+
+<h2 id="new">커뮤니티</h2>
+<hr>
+<br><br><br>
+
+<table class="table" style="width: 95%;"  align="center">
+    <thead>
+    <tr align="center" bgcolor="#EAEAEA" >
+        <th scope="col" width="80">No.</th>
+        <th scope="col" width="200">구분</th> <!--레시피 공유 / 자유글 / ...-->
+        <td scope="col" width="500"><b>제목</b></td>
+<!--        <th scope="col" width="200">글쓴이</th>-->
+        <th scope="col" width="200">게시일</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#articleList}}
+        <tr align="center">
+            <th  width="80">{{id}}</th>
+            <td  width="200">{{division}}</td>
+            <td  width="500" align="left"><a href="/articles/{{id}}" style="text-decoration:none; color: inherit;"><b>{{title}}</b></a></td>
+<!--            <td  width="200">글쓴이</td>-->
+            <td  width="200">{{rgiDate}}</td>
+        </tr>
+    {{/articleList}}
+    </tbody>
+</table>
+
+<div align="right" style="width:98%;">
+    <a href="/view/Community" class="btn btn-outline-success" align="right">글 작성</a>
+</div>
+
+
+
+
+{{>layouts/footer}}

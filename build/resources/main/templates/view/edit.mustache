@@ -1,0 +1,82 @@
+{{>layouts/header}}
+
+<div class="container text-center"id="new1">
+    <h2 id="new">식자재 등록 정보 수정</h2>
+    <table class="table mt-30">
+        <thead>
+        <tr>
+            <th scope="col">순서</th>
+            <th scope="col">이름</th>
+            <th scope="col">부류 종류</th>
+            <th scope="col">유통기한 시작</th>
+            <th scope="col">유통기한 종료</th>
+            <th scope="col">남은 유통기한</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {{#Alldata}}
+            <tr>
+                <th scope="row">{{id}}</th>
+                <td>{{name}}</td>
+                <td>{{kind}}</td>
+                <td>{{date}}</td>
+                <td>{{enddate}}</td>
+                <td></td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</div>
+<form action="/view/create" method="post">
+    <div class="top">
+        <div class="top1">
+            <div class="top1-1">
+                <h2 class="container ttt" >과일이름</h2>
+            </div>
+            <div class="ttt">
+                <input type="text" class="form-control" name="name" value="{{name}}"/>
+
+            </div>
+
+        </div>
+        <div class="top1">
+            <div class="top1-11">
+                <h2 class="container ttt">유통기한 시작</h2>
+            </div>
+            <div class="ttt">
+                <input type="datetime-local" class="form-control" name="date" value="{{date}}">
+            </div>
+        </div>
+        <div class="top1">
+            <div class="top1-1">
+                <h2 class="container ttt">부류 선택</h2>
+            </div>
+            <div class="column container">
+                <div class="ttt">
+                    <select  name="kind"  class="form-select form-select-sm align-center" aria-label=".form-select-sm example text-center" >
+                        <option selected>종류를 선택하세요</option>
+                        <option value="야채">야채</option>
+                        <option value="과일">과일</option>
+                        <option value="해당없음">해당없음</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="top1">
+            <div class="top1-11">
+                <h2 class="container ttt">유통기한 종료</h2>
+            </div>
+            <div class="ttt">
+                <input type="datetime-local" class="form-control" name="enddate" value="{{enddate}}">
+            </div>
+        </div>
+
+    </div>
+    <div class="btt">
+        <button type="submit" class="btn btn-outline-primary btn-lg">등록</button>
+    </div>
+</form>
+        {{/Alldata}}
+{{>layouts/footer}}

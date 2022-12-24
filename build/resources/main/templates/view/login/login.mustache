@@ -1,0 +1,38 @@
+{{>layouts/header}}
+<div>
+
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light">로그인</h1>
+                <br>
+                <br>
+                <br>
+                <p class="lead text-muted">로그인해서 식자재와 레시피를 확인해보세요!</p>
+            </div>
+        </div>
+    </section>
+    <div>
+        <!--        <link rel="stylesheet" type="text/css" href="/css/login.css">-->
+        <body class="text-center">
+        <div>
+        </div>
+        <main class="form-signin w-100 m-auto">
+
+            <div class="form-floating">
+                <input type="text" class="form-control  " name="userId" id="userId" placeholder="name@example.com"  >
+                <label for="floatingInput" class="text-center" style="color:gray;" >ID 입력하세요.</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" name="userPw" id="userPw" placeholder="Password" >
+                <label for="floatingPassword" class="text-center" style="color:gray;" >Password 입력하세요.</label>
+            </div>
+            <div class="checkbox mb-3">
+            </div>
+            <button class="w-100 btn btn-lg btn btn-success" type="submit" onclick="loginOk();" >로그인 하기</button>
+        </main>
+<!--        </body>-->
+
+    </div>
+</div>
+{{>layouts/footer}}

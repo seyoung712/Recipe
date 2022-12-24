@@ -1,0 +1,58 @@
+{{>layouts/header}}
+
+{{#dataid}}
+
+<h2 id="new">식자재 상세 정보</h2>
+<hr>
+    <div class="listshowtable container text-center">
+
+<table class="detail-tbl-1">
+    <tr>
+        <td style="padding:15px;"> <h3>{{name}}</h3> </td>
+    </tr>
+    <tr>
+        <td> <img src="/images/{{image}}" style="width:300px; height:300px;"> </td>
+    </tr>
+</table>
+
+<br>
+
+<table class="detail-tbl-2 detail-border">
+    <tr class="detail-border">
+        <td bgcolor="#eaeaea" width="300px">구분</td>
+        <td>{{kind}}</td>
+    </tr>
+    <tr>
+        <td bgcolor="#eaeaea" width="300px">제조일</td>
+        <td>{{start}}</td>
+    </tr>
+    <tr>
+        <td bgcolor="#eaeaea" width="300px">폐기일</td>
+        <td>{{enddate}}</td>
+    </tr>
+    <tr>
+        <td bgcolor="#eaeaea" width="300px">유통기한</td>
+        <td>{{othermonth}}개월 {{otherdate}}일</td>
+    </tr>
+    <tr>
+        <td  class="listinfo" bgcolor="#eaeaea" width="300px">수량 및 설명</td>
+        <td>{{nameinfo}}</td>
+    </tr>
+</table>
+
+<table class="detail-tbl-1">
+    <tr>
+        <td>
+            <a href="/view/refrigerator">
+            <button class="btn btn-outline-primary btn-lg"  style="width:230px; height:35px; font-size:15px; margin:15px;">
+                냉장고 페이지로 바로가기
+            </button>
+            </a>
+        </td>
+    </tr>
+</table>
+    </div>
+
+{{/dataid}}
+
+{{>layouts/footer}}

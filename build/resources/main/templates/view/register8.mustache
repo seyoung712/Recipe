@@ -1,0 +1,85 @@
+{{>layouts/header}}
+
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">{{foodname}}</h1>
+            <br>
+            <br>
+            <br>
+            <p class="lead text-muted">사진을 통해 조리순서를 확인해보세요!</p>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <div class="row center-table">
+
+        <div class="card" style="width: 100rem;">
+
+            <p class="menuinfo text-center">
+                <!--                모델로 지정한 Ingredient(재료)를 출력한다.-->
+                {{Ingredient}}
+                <br>
+            </p>
+            <!--레시피-->
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <img src="/images/참치까스1.jpg" alt="" style="width: 15rem width: 215px; height: 230px;">  1. {{infoList1}}
+                </li>
+            </ul>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <img src="/images/참치까스2.jpg" alt="" style="width: 15rem width: 215px; height: 230px;">  2. {{infoList2}}
+                </li>
+            </ul>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <img src="/images/참치까스3.jpg" alt="" style="width: 15rem width: 215px; height: 230px;">  3. {{infoList3}}
+                </li>
+            </ul>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <img src="/images/참치까스4.jpg" alt="" style="width: 15rem width: 215px; height: 230px;">  4. {{infoList4}}
+                </li>
+            </ul>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <img src="/images/참치까스5.jpg" alt="" style="width: 15rem width: 215px; height: 230px;">  5. {{infoList5}}
+                </li>
+            </ul>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <img src="/images/참치까스6.jpg" alt="" style="width: 15rem width: 215px; height: 230px;">  6. {{infoList6}}
+                </li>
+            </ul>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <img src="/images/참치까스7.jpg" alt="" style="width: 15rem width: 215px; height: 230px;">  7. {{infoList6}}
+                </li>
+            </ul>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <img src="/images/참치까스8.jpg" alt="" style="width: 15rem width: 215px; height: 230px;">  8. {{infoList6}}
+                </li>
+            </ul>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <img src="/images/참치까스9.jpg" alt="" style="width: 15rem width: 215px; height: 230px;">  9. {{infoList6}}
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+</div>
+
+<br><br>
+
+<div class="text-center">
+    <!--    a태그와 button을 사용해서 레시피 페이지로 가게 만든다.-->
+    <a href="/Recipe">
+        <button  type="submit" class="btn btn-sm btn-outline-primary btn-lg" style="font-size:12px;" >레시피 페이지로 가기</button>
+    </a>
+</div>
+
+{{>layouts/footer}}

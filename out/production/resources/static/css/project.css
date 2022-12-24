@@ -1,0 +1,268 @@
+/*header*/
+/**navgation var**/
+.navbar-brand{
+font-family: "NanumGothic";
+font-weight : bold;
+
+}
+.navbar-background{
+background-color: #ffffff;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+align: center;
+opacity : 0.8;
+}
+.navbar{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+/*항목 맨뒤로*/
+.back{
+position:relative;
+}
+.hrGray{
+background-color:#eaeaea;
+border: none;
+height: 0.5px;
+}
+/**logo**/
+.logo{
+font-size:100px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+h1 span:nth-child(1){
+    color :#4184f4;
+}
+h1 span:nth-child(2){
+    color :#ea4235;
+}
+h1 span:nth-child(3){
+    color :#fabc08;
+}
+.logofont{
+ font-family: "NanumGothic";
+ margin-bottom: 50px;
+}
+/**설명**/
+.info{
+display:flex;
+align-items:center;
+justify-content:center;
+}
+.info2{
+padding: 50px;
+ font-family: "NanumGothic";
+display:flex;
+align-items:center;
+justify-content:center;
+}
+#info{
+margin-top:10%
+}
+/*footer*/
+/**팀명,프로젝트명**/
+#team{
+display: flex;
+justify-content: center;
+margin-top:80px;
+}
+#team2{
+display:flex;
+justify-content: center;
+}
+.team{
+margin-top:80px;
+}
+
+/*F2, 레식피 소개*/
+.information{
+display:flex;
+justify-content: center;
+}
+/*listpage*/
+.top{
+display: flex;
+flex-direction:row;
+justify-content:center;
+}
+.top1{
+display: flex;
+flex-direction:column;
+margin:100px;
+}
+.top1-1{
+display:flex;
+margin-left:10px;
+margin-top:30px;
+font-size:20px;
+}
+.top1-11{
+display:flex;
+align-content:center;
+margin-top:30px;
+font-size:20px;
+}
+.ttt{
+margin-top:30px;
+display:flex;
+justify-content:center;
+align-content:center;
+font-size:30px;
+}
+.btt{
+display:flex;
+align-items: center;
+justify-content: center;
+}
+
+/*mypage*/
+#new{
+display:flex ;
+justify-content: center;
+align-items: center;
+margin-top: 20px;
+padding: 10px;
+font-weight : bold;
+}
+.table{
+margin-top: 30px;
+cellpadding: 20px;
+}
+#new1{
+margin-top:20px;
+}
+
+#cc11{
+display: grid;
+grid-template-rows: repeat(4,200px);
+grid-template-columns: repeat(2,1fr);
+width: 400px;
+}
+.figure{
+
+}
+.menuinfo ,card-title{
+    width: 100%;
+    height: 50px;
+    display:inline-block;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+}
+.card-title{
+    width: 100%;
+    height: 50px;
+    display:inline-block;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+}
+/*listshow페이지*/
+#listshow{
+ width: 100%;
+ padding: 15px;
+ border : 1px solid black;
+}
+#imgshow{
+margin-top:80px;
+padding: 35px;
+}
+#backbutton{ /*냉장고 페이지로 바로가기*/
+display:flex;
+align-content: center;
+justify-content: center;
+}
+.card-img-top{
+  width: 215px;
+  height: 230px;
+}
+
+/*식자재 추가*/
+.textarea{
+resize: none;
+width: 200px;
+}
+/*버튼css <!--class="w-btn-outline w-btn-blue-outline"--> */
+.w-btn-outline {
+    position: relative;
+    right: 220px;
+    padding: 8px 20px;
+    border-radius: 5px;
+    /* box-shadow: 0 1px 20px rgba(0, 0, 0, 0.2); */
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+}
+/*
+.w-btn-blue {
+    background-color: #6aafe6;
+    color: #d4dfe6;
+}
+*/
+.w-btn-blue-outline:hover { /*클릭시 색변환*/
+    background-color: #ffffff;
+    color: #000000;
+}
+.w-btn-blue-outline {
+    border: 1px solid #BDBDBD;
+    color: #6e6e6e;
+}
+
+/*상세화면*/
+.detail-tbl-1{
+width:60%;
+margin:auto;
+}
+.detail-tbl-2{
+width:40%;
+margin:auto;
+text-align:center;
+margin-top: 30px;
+}
+.detail-border{ /*표 바깥테두리*/
+border-bottom: 2px solid #000000;
+border-top: 2px solid #000000;
+}
+/*listshow페이지 상세설명 줄바꿈*/
+.listinfo{
+width:200px;
+word-break:break-all;
+}
+
+
+/*
+table, td, tr {
+border: 1px solid;
+}
+*/
+
+.title{
+width:300px;
+}
+
+/*레시피 화면*/
+.recipe-center{
+text-align:center;
+}
+
+/* a 태그 마우스 오버*/
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
